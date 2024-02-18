@@ -1,0 +1,23 @@
+package com.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Page_bmEdit extends BaseTest {
+	
+WebDriver driver;
+
+public Page_bmEdit(WebDriver driver) {
+
+	this.driver= driver;
+	
+} 
+public void editTest()throws InterruptedException {
+Thread.sleep(1000);
+  driver.findElement(By.xpath(pr_loc.getProperty("edit_opration"))).click();
+driver.findElement(By.xpath(pr_loc.getProperty("edit_title"))).sendKeys(pr_data.getProperty("edit_data"));
+Thread.sleep(2000);
+driver.findElement(By.xpath(pr_loc.getProperty("edit_save_btn"))).click();
+
+}
+}

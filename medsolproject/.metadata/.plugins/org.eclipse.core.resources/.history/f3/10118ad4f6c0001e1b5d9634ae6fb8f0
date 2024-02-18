@@ -1,0 +1,43 @@
+package com.testcases;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.pages.BaseTest;
+import com.pages.Page_Doctors;
+import com.pages.Page_login;
+
+public class TC_doctors {
+	//@Test
+	BaseTest base=new BaseTest();
+	
+	@BeforeTest
+	public void url_open() throws IOException
+	{
+		base.setup();
+	}
+	
+	@Test(priority=1)
+	public void logintest()
+	{
+		Page_login log=new Page_login(base.getdriver());
+		log.login();
+	}
+	
+	@Test(priority=2)
+	public void doctorsTest() throws InterruptedException
+	{
+		Page_Doctors doc=new Page_Doctors(base.getdriver());
+		doc.doctorsTest();
+				
+	}
+	
+	//@AfterTest
+	public void url_close()
+	{
+	base.teardown();	
+	}
+
+}

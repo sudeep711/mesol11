@@ -1,0 +1,21 @@
+user_field=email
+pass_field=password
+button=//button[normalize-space()='Login']
+
+
+doctor_module=//div[@id='sidebar']//li[9]//a[1]
+actions=dropdownMenuButton
+new_doctor=//a[normalize-space()='New Doctor']
+first_name=first_name
+last_name=last_name
+doctor_dept=//span[@id='select2-doctorsDepartmentId-container']
+dept_sbox=//input[@role='searchbox']
+email=//input[@id='createAccountantEmail']
+designation=//input[@id='designation']
+qualification=//input[@id='qualification']
+blood_group=//span[@id='select2-doctorBloodGroup-container']
+blood_sbox=//input[@role='searchbox']
+specialist=//input[@id='specialist']
+password=//input[@id='password']
+confirm_password=//input[@id='password_confirmation']
+save_button=//input[@value='Save']
